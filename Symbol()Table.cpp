@@ -64,7 +64,7 @@ extractSymbolTable(const string &filename,
 }
 
 int main() {
-  string instructionFile = "/home/bagoury/Desktop/SIC_XE/INSTRUCTIONS.txt";
+  string instructionFile = "INSTRUCTIONS.txt";
   unordered_set<string> instructions = loadSicInstructions(instructionFile);
 
   instructions.insert("START");
@@ -74,11 +74,11 @@ int main() {
   instructions.insert("RESB");
   instructions.insert("BYTE");
 
-  string sourceFile = "/home/bagoury/Desktop/SIC_XE/SICXE_Output_LOCATION.txt";
+  string sourceFile = "SIC_XE/SICXE_Output_LOCATION.txt";
   vector<SymbolEntry> symbolTable =
       extractSymbolTable(sourceFile, instructions);
 
-  freopen ("/home/bagoury/Desktop/SIC_XE/SICXE_SYMBOL_TABLE.txt","w", stdout);
+  freopen ("SICXE_SYMBOL_TABLE.txt","w", stdout);
   cout << "+------------+------------+" << endl;
   cout << "| " << left << setw(10) << "Symbol" << " | " << setw(10) << "Address"
        << " |" << endl;
